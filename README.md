@@ -1,52 +1,50 @@
-# 📊 Telco Customer Churn Prediction & Analytics
+# Customer Churn Prediction 📊📉
 
-An end-to-end Data Analytics and Machine Learning project designed to predict customer churn for a telecommunications company. By analyzing customer demographics, account details, and subscribed services, this project identifies key factors driving customer attrition and builds classification models to proactively flag high-risk customers.
-
----
-
-## 📌 Project Overview
-Customer churn is a critical metric for subscription-based businesses. Retaining existing customers is significantly more cost-effective than acquiring new ones. 
-
-This project performs Exploratory Data Analysis (EDA) on over **7,000+ customer records**, cleans and preprocesses categorical and numerical features, and trains multiple machine learning classifiers to predict whether a customer is likely to churn (`Yes` / `No`).
+An end-to-end Machine Learning and Data Analytics project designed to analyze telecom customer demographics, service usage, and contract types to accurately predict customer churn and identify key business risk factors.
 
 ---
 
-## 📂 Dataset Information
-* **Source:** IBM Telco Customer Churn Dataset (`WA_Fn-UseC_-Telco-Customer-Churn.csv`)
-* **Total Records:** 7,043 rows
-* **Total Features:** 21 columns
-* **Target Variable:** `Churn` (1 = Churned, 0 = Retained)
+## 🖼️ Exploratory Data Analysis & Model Evaluation
+
+### 1. Exploratory Data Analysis (EDA Overview)
+![EDA Churn Overview](eda_churn_overview.png)
+
+---
+
+### 2. Confusion Matrix (Logistic Regression)
+![Confusion Matrix](confusion_matrix.png)
+
+---
+
+## 🚀 Overview
+
+Customer churn prediction is crucial for subscription-based telecommunication providers to increase retention rates. This project uses historical customer data to train classification models (Logistic Regression, Random Forest, Gradient Boosting), perform Exploratory Data Analysis (EDA), and uncover insights into why customers leave.
+
+### Key Highlights:
+* **Exploratory Data Analysis (EDA):** Visualizations exploring correlations between tenure, monthly charges, contract types, and churn rates.
+* **Predictive Modeling:** Machine Learning classification pipelines trained on Telco customer records.
+* **Model Evaluation:** Evaluates precision, recall, F1-score, ROC-AUC, and confusion matrix.
+* **Data Preprocessing:** Robust workflow handling missing values, encoding categorical variables, and standardizing features.
 
 ---
 
 ## 🛠️ Tech Stack & Libraries
-* **Language:** Python 3.x
-* **Data Manipulation:** `pandas`, `numpy`
-* **Data Visualization:** `matplotlib`, `seaborn`
-* **Machine Learning:** `scikit-learn`
+
+* **Language:** Python 3.8+
+* **Data Manipulation:** Pandas, NumPy
+* **Machine Learning:** Scikit-learn
+* **Data Visualization:** Matplotlib, Seaborn
 
 ---
 
-## 📈 Model Performance & Evaluation
+## 📁 Project Structure
 
-| Model | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) | ROC-AUC |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Logistic Regression** | **80.70%** | **56.68%** | **65.84%** | **60.92%** | **0.8416** |
-| **Gradient Boosting** | 79.84% | 51.34% | 65.31% | 57.49% | 0.8425 |
-| **Random Forest** | 78.64% | 49.20% | 62.37% | 55.01% | 0.8251 |
-
----
-
-## 🔑 Key Insights & Business Recommendations
-1. **Contract Type:** Customers on Month-to-Month contracts have the highest churn rate. Incentivizing 1-year or 2-year long-term contracts can reduce churn significantly.
-2. **Tenure Impact:** High churn is observed in the first 0–12 months of customer onboarding. Special onboarding discounts and support can improve retention.
-3. **Monthly Charges:** Customers with higher monthly charges show higher churn. Offering tailored product bundles or budget-friendly plans can retain sensitive segments.
-
----
-
-## ⚙️ How to Run the Project
-
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/vishal-jadhav876/Customer-Churn-Prediction.git](https://github.com/vishal-jadhav876/Customer-Churn-Prediction.git)
-cd Customer-Churn-Prediction
+```text
+Customer_Churn_Prediction/
+│
+├── customer_churn_prediction.py       # Main Python script for data processing, EDA & model training
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv # Telco Customer Churn Dataset
+├── eda_churn_overview.png             # EDA Visualization Screenshot
+├── confusion_matrix.png               # Model Confusion Matrix Screenshot
+├── requirements.txt                   # Project dependencies
+└── README.md                          # Project documentation
